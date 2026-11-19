@@ -86,4 +86,53 @@
       });
     }
   }
+
+  // Demo shopping bag: selections are enquiry items only; no stock or payment system.
+  const bag = [];
+  const drawer = document.getElementById('bagDrawer');
+  const backdrop = document.getElementById('bagBackdrop');
+  const openBag = document.getElementById('openBag');
+  const closeBag = document.getElementById('closeBag');
+  const bagItems = document.getElementById('bagItems');
+  const bagCount = document.getElementById('bagCount');
+  const bagHeadingCount = document.getElementById('bagHeadingCount');
+  const whatsappOrder = document.getElementById('whatsappOrder');
+  const renderBag = () => {
+    const count = bag.reduce((sum, item) => sum + item.quantity, 0);
+    if (bagCount) bagCount.textContent = count;
+    if (bagHeadingCount) bagHeadingCount.textContent = ' (' + count + ')';
+    if (whatsappOrder) whatsappOrder.disabled = bag.length === 0;
+    if (!bagItems) return;
+    bagItems.innerHTML = bag.length ? bag.map((item, index) =>
+      '<div class="bag-row"><div><strong>' + item.name + '</strong><small>ENQUIRY ITEM · QTY ' + item.quantity + '</small></div><button class="bag-remove" type="button" data-remove="' + index + '">REMOVE</button></div>'
+    ).join('') : '<p class="bag-empty">Your bag is waiting for a little personality.</p>';
+    bagItems.querySelectorAll('[data-remove]').forEach(button => button.addEventListener('click', () => {
+      bag.splice(Number(button.dataset.remove), 1); renderBag();
+    }));
+  };
+  const setBagOpen = open => {
+    if (!drawer || !backdrop) return;
+    drawer.classList.toggle('open', open);
+    backdrop.classList.toggle('open', open);
+    document.body.classList.toggle('bag-open', open);
+    drawer.setAttribute('aria-hidden', String(!open));
+    if (open) closeBag?.focus(); else openBag?.focus();
+  };
+  openBag?.addEventListener('click', () => setBagOpen(true));
+  closeBag?.addEventListener('click', () => setBagOpen(false));
+  backdrop?.addEventListener('click', () => setBagOpen(false));
+  document.addEventListener('keydown', event => { if (event.key === 'Escape') setBagOpen(false); });
+  document.querySelectorAll('[data-add]').forEach(button => button.addEventListener('click', () => {
+    const name = button.dataset.add;
+    const existing = bag.find(item => item.name === name);
+    if (existing) existing.quantity += 1; else bag.push({ name, quantity: 1 });
+    renderBag();
+    setBagOpen(true);
+  }));
+  whatsappOrder?.addEventListener('click', () => {
+    if (!bag.length) return;
+    const message = encodeURIComponent('Hi Guru Nation! I would like to enquire about these items:\\n' + bag.map(item => item.name + ' — quantity ' + item.quantity).join('\\n') + '\\nPlease confirm availability and pricing. Thank you.');
+    window.open('https://wa.me/?text=' + message, '_blank', 'noopener,noreferrer');
+  });
+  renderBag();
 })();
