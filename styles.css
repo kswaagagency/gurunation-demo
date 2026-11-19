@@ -8,3 +8,18 @@
 .look{clip-path:inset(0 0 0 0);}.look img{transform:scale(1.035);transition:transform 1.1s cubic-bezier(.2,.7,.2,1),filter .5s}.look.visible img{transform:scale(1)}.look:hover img{transform:scale(1.055)}.statement-art{transform-origin:50% 50%;will-change:transform}.flower-mini{will-change:transform}
 @media(max-width:800px){.motion-manifesto{min-height:570px;padding:90px 7vw}.manifesto-words{font-size:clamp(68px,15vw,115px);gap:8px 2vw}.manifesto-note{margin:30px 0 0;max-width:260px}.manifesto-bottom{left:7vw;right:7vw;font-size:7px}.orbit-one{width:400px;height:400px;right:-260px}.orbit-two{width:290px;height:290px;right:-205px}.ticker{padding:15px 0}}
 @media(prefers-reduced-motion:reduce){.ticker-track,.orbit-one,.orbit-two{animation:none!important}.scroll-progress{display:none}}
+
+/* SAFARI ICON + ALIGNMENT FIX */
+.icon-arrow{display:inline-block;width:15px;height:15px;vertical-align:middle;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.header-link .icon-arrow{width:13px;height:13px;margin-left:9px}
+.tile-name .arrow-mark{float:right;display:inline-flex;align-items:center;font-size:0;font-weight:400}
+.tile-name .arrow-mark .icon-arrow{width:18px;height:18px}
+.grid-note .icon-arrow,.campaign-copy>a .icon-arrow,.finale>a .icon-arrow{margin-left:10px}
+.skip .icon-arrow{width:14px;height:14px;margin-left:9px}
+.ticker{transform:none;margin:0 0 12px;padding:9px 0}
+.ticker-track{gap:25px}
+.ticker span{font-size:clamp(16px,2.35vw,27px)}
+.ticker .spark-mark{display:inline-flex;width:17px;height:17px;align-items:center;justify-content:center;font-size:0;text-shadow:none}
+.ticker .spark-mark svg{display:block;width:100%;height:100%;fill:var(--pink);stroke:var(--ink);stroke-width:.8}
+.orbit-one:after,.orbit-two:after{content:"";width:20px;height:20px;background:var(--pink);clip-path:polygon(50% 0,61% 36%,96% 20%,75% 50%,100% 80%,62% 65%,50% 100%,38% 65%,0 80%,25% 50%,4% 20%,39% 36%);border:0}
+@media(max-width:800px){.ticker{padding:8px 0;margin-bottom:8px}.ticker-track{gap:19px}.ticker span{font-size:clamp(15px,4.2vw,21px)}.ticker .spark-mark{width:13px;height:13px}}
