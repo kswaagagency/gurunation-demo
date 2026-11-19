@@ -54,6 +54,13 @@
       if (progress) progress.style.transform = 'scaleX(' + (max > 0 ? window.scrollY / max : 0) + ')';
       const y = window.scrollY;
       if (heroPhoto && y < window.innerHeight * 1.5) heroPhoto.style.transform = 'translate3d(0,' + (y * .16) + 'px,0) scale(1.08)';
+      document.querySelectorAll('[data-depth]').forEach((photo, index) => {
+        const rect = photo.getBoundingClientRect();
+        if (rect.bottom > 0 && rect.top < window.innerHeight) {
+          const offset = (rect.top + rect.height / 2 - window.innerHeight / 2) * -.035;
+          photo.style.transform = 'translate3d(0,' + offset + 'px,0) scale(1.08)';
+        }
+      });
       if (campaignPhoto) {
         const rect = campaignPhoto.parentElement.getBoundingClientRect();
         if (rect.bottom > 0 && rect.top < window.innerHeight) campaignPhoto.style.transform = 'translate3d(0,' + ((rect.top - window.innerHeight) * -.09) + 'px,0) scale(1.12)';
@@ -116,6 +123,7 @@
     backdrop.classList.toggle('open', open);
     document.body.classList.toggle('bag-open', open);
     drawer.setAttribute('aria-hidden', String(!open));
+    drawer.inert = !open;
     if (open) closeBag?.focus(); else openBag?.focus();
   };
   openBag?.addEventListener('click', () => setBagOpen(true));
