@@ -44,16 +44,16 @@
 </div>
 <header class="header" id="top">
   <a href="#top" class="brand" aria-label="Guru Nation home"><span class="brand-symbol">G</span><span>GURU<br><b>NATION</b></span></a>
-  <nav class="nav" id="nav"><a href="#collections">COLLECTIONS</a><a href="#story">OUR WORLD</a><a href="#lookbook">LOOKBOOK</a></nav>
+  <nav class="nav" id="nav"><a href="#collections">COLLECTIONS</a><a href="#story">OUR WORLD</a><a href="#lookbook">LOOKBOOK</a><a href="#enquire">ENQUIRE</a></nav>
   <a class="header-link" href="#collections">DISCOVER THE DROP <svg class="icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a>
   <button class="bag-trigger" id="openBag" type="button" aria-label="Open shopping bag">BAG <span id="bagCount">0</span></button>
   <button class="menu" id="menu" aria-label="Open navigation" aria-expanded="false"><i></i><i></i></button>
 </header>
 <div class="bag-backdrop" id="bagBackdrop"></div>
 <aside class="bag-drawer" id="bagDrawer" role="dialog" aria-modal="true" aria-labelledby="bagTitle" aria-hidden="true">
-  <div class="bag-head"><div><p class="eyebrow">YOUR SELECTION</p><h2 id="bagTitle">THE BAG<span id="bagHeadingCount"> (0)</span></h2></div><button class="bag-close" id="closeBag" type="button" aria-label="Close shopping bag">×</button></div>
+  <div class="bag-head"><div><p class="eyebrow">OPTIONAL STORE CONCEPT · CUSTOM QUOTE REQUIRED</p><h2 id="bagTitle">THE BAG<span id="bagHeadingCount"> (0)</span></h2></div><button class="bag-close" id="closeBag" type="button" aria-label="Close shopping bag">×</button></div>
   <div class="bag-items" id="bagItems"><p class="bag-empty">Your bag is waiting for a little personality.</p></div>
-  <div class="bag-foot"><p class="bag-note">DEMO EXPERIENCE · NO PAYMENT IS COLLECTED</p><button class="whatsapp-order" id="whatsappOrder" type="button" disabled>ENQUIRE ON WHATSAPP <span>↗</span></button><p class="bag-disclaimer">Product availability and pricing are confirmed directly with Guru Nation. This demo does not process payments.</p></div>
+  <div class="bag-foot"><p class="bag-note">OPTIONAL E-COMMERCE ADD-ON · CUSTOM QUOTE REQUIRED</p><button class="whatsapp-order" id="whatsappOrder" type="button" disabled>ENQUIRE ON WHATSAPP <span>↗</span></button><p class="bag-disclaimer">This optional store concept is not included in K-Swaag website packages by default. No stock, customer data or payments are processed. Connect Guru Nation’s WhatsApp number before launch.</p></div>
 </aside>
 <main>
 <section class="hero">
@@ -81,6 +81,17 @@
 <figure class="look"><img src="IMG_4642.jpeg" alt="Guru Nation headwear"><figcaption>05 — SIGNATURE</figcaption></figure>
 <figure class="look"><img src="IMG_4639.jpeg" alt="Guru Nation streetwear collection"><figcaption>06 — OWN YOUR LANE</figcaption></figure>
 </div></section>
+<section class="enquire-section" id="enquire">
+  <div class="enquire-intro"><p class="eyebrow">05 / START A CONVERSATION</p><h2>MAKE IT<br><em>PERSONAL.</em></h2><p>Questions about a piece, a collaboration or the Nation? Send a message and start the conversation.</p></div>
+  <form class="enquiry-form" id="enquiryForm">
+    <label for="enquiryName">YOUR NAME</label><input id="enquiryName" name="name" autocomplete="name" required maxlength="80" placeholder="Name">
+    <label for="enquiryEmail">EMAIL (OPTIONAL)</label><input id="enquiryEmail" name="email" type="email" autocomplete="email" maxlength="120" placeholder="you@example.com">
+    <label for="enquiryMessage">WHAT'S ON YOUR MIND?</label><textarea id="enquiryMessage" name="message" required maxlength="1200" rows="4" placeholder="Tell us what you're looking for..."></textarea>
+    <button type="submit">SEND ENQUIRY VIA WHATSAPP <span>↗</span></button>
+    <p class="form-note">DEMO FORM · CONNECT THE BRAND'S WHATSAPP NUMBER BEFORE LAUNCH.</p>
+    <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+  </form>
+</section>
 <section class="finale"><div class="finale-stamp">GN®</div><p class="eyebrow">THIS IS YOUR INVITATION</p><h2>WELCOME TO<br><em>THE NATION.</em></h2><p class="finale-sub">YOUR STYLE. YOUR RULES. YOUR WORLD.</p><a href="#top">BACK TO THE TOP <svg class="icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a><div class="finale-ring"></div></section>
 </main>
 <footer class="footer"><a href="#top" class="brand"><span class="brand-symbol">G</span><span>GURU<br><b>NATION</b></span></a><p>TO THE WORLD. WITH GOOD ENERGY.</p><span>© <b id="year"></b> GURU NATION</span></footer>
