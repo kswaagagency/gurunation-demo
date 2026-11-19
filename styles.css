@@ -72,3 +72,21 @@
 body.bag-open{overflow:hidden}
 @media(max-width:800px){.bag-trigger{padding:9px 10px;margin-left:auto;margin-right:10px}.header-link{margin-left:auto}.bag-drawer{padding-top:25px}}
 @media(max-width:460px){.bag-trigger{font-size:7px;padding:8px}.add-to-bag{right:12px;bottom:66px;padding:9px}}
+
+
+/* ENQUIRY FORM — Growth/Premium service feature */
+.enquire-section{background:var(--yellow);padding:110px 8vw;display:grid;grid-template-columns:1fr .8fr;gap:10vw;align-items:start}
+.enquire-intro .eyebrow{color:#5c5521}.enquire-intro h2{font:800 clamp(58px,9vw,112px)/.82 var(--display);letter-spacing:-.1em;margin:0}
+.enquire-intro h2 em{font-style:normal;font-weight:400}
+.enquire-intro>p:last-child{max-width:330px;font-size:13px;line-height:1.8;color:#514b27;margin-top:30px}
+.enquiry-form{display:flex;flex-direction:column;gap:10px}
+.enquiry-form label{font:800 8px var(--display);letter-spacing:.15em;margin-top:10px}
+.enquiry-form input,.enquiry-form textarea{width:100%;border:0;border-bottom:1px solid #1515158a;background:transparent;padding:12px 0;font:500 14px var(--body);color:#151515;outline:none;border-radius:0}
+.enquiry-form input:focus,.enquiry-form textarea:focus{border-bottom:2px solid #151515}
+.enquiry-form textarea{resize:vertical;min-height:110px}
+.enquiry-form input::placeholder,.enquiry-form textarea::placeholder{color:#6e673b}
+.enquiry-form button{margin-top:14px;border:0;background:#151515;color:#fff;padding:17px 18px;text-align:left;font:800 9px var(--display);letter-spacing:.13em;cursor:pointer;display:flex;justify-content:space-between}
+.enquiry-form button:hover{background:#fff;color:#151515}
+.form-note,.form-status{font-size:8px;line-height:1.6;letter-spacing:.1em;color:#5c5521}
+.form-status{min-height:12px;margin:0}
+@media(max-width:800px){.enquire-section{grid-template-columns:1fr;gap:42px;padding:85px 6vw}}
