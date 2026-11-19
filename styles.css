@@ -141,3 +141,11 @@ body.bag-open{overflow:hidden}
   .product-title-row h3,.product-title-row>span{font-size:11px;}
   .product-specs,.product-foot{font-size:5.5px;}
 }
+
+
+/* CATALOGUE BAG ACTIONS — display-only demo interactions */
+.product-add{width:100%;margin-top:13px;padding:13px 12px;border:1px solid #151515;background:transparent;color:#151515;display:flex;justify-content:space-between;align-items:center;font:800 8px var(--display);letter-spacing:.13em;cursor:pointer;transition:background .22s,color .22s,transform .22s}
+.product-add span{font-size:16px;line-height:1}
+.product-add:hover,.product-add:focus-visible{background:#151515;color:#f3f0e8;transform:translateY(-2px)}
+.product-add:focus-visible{outline:2px solid #2587e8;outline-offset:3px}
+.whatsapp-order .icon-arrow,.enquiry-form button .icon-arrow{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:0 0 auto}
