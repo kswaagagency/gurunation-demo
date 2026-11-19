@@ -90,3 +90,39 @@ body.bag-open{overflow:hidden}
 .form-note,.form-status{font-size:8px;line-height:1.6;letter-spacing:.1em;color:#5c5521}
 .form-status{min-height:12px;margin:0}
 @media(max-width:800px){.enquire-section{grid-template-columns:1fr;gap:42px;padding:85px 6vw}}
+
+
+/* GURU NATION PRODUCT CATALOGUE — responsive editorial product grid */
+.product-catalogue{background:#f3f0e8;padding:105px 8vw 115px;color:#151515}
+.catalogue-topline,.catalogue-toolbar{display:flex;justify-content:space-between;gap:20px;border-bottom:1px solid #15151535;padding-bottom:14px;font:800 8px var(--display);letter-spacing:.15em}
+.catalogue-heading{display:flex;justify-content:space-between;align-items:end;gap:35px;padding:58px 0 42px}
+.catalogue-heading .eyebrow{margin:0 0 17px}
+.catalogue-heading h2{font:800 clamp(58px,9vw,112px)/.82 var(--display);letter-spacing:-.1em;margin:0}
+.catalogue-heading h2 em{font-style:normal;font-weight:400}
+.catalogue-heading>p{max-width:260px;margin:0 0 6px;color:#68665f;font-size:12px;line-height:1.8}
+.catalogue-toolbar{padding:14px 0;margin-bottom:22px;color:#69675f;border-color:#15151520}
+.product-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:34px 17px}
+.product-card{min-width:0}
+.product-image{position:relative;aspect-ratio: .78;background:#dedbd2;overflow:hidden}
+.product-image img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1)}
+.product-card:hover .product-image img{transform:scale(1.055)}
+.product-number{position:absolute;top:12px;left:12px;background:#f3f0e8;padding:7px 9px;font:800 8px var(--display);letter-spacing:.1em}
+.product-tag{position:absolute;right:12px;top:12px;background:#ffe33e;padding:7px 9px;font:900 7px var(--display);letter-spacing:.1em}
+.product-sold{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%) rotate(-7deg);text-align:center;background:#151515;color:#ffe33e;padding:12px 5px;font:900 11px var(--display);letter-spacing:.16em}
+.product-info{padding:14px 1px 0}
+.product-title-row{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.product-title-row h3{font:700 15px var(--display);letter-spacing:-.04em;margin:0}
+.product-title-row>span{font:800 15px var(--display);white-space:nowrap}
+.product-description{min-height:55px;margin:9px 0 13px;color:#6e6b64;font-size:10px;line-height:1.65}
+.product-specs{display:flex;justify-content:space-between;gap:8px;border-top:1px solid #15151525;padding:10px 0 9px;font:800 7px var(--display);letter-spacing:.1em}
+.product-specs span:last-child{text-align:right;color:#77736b}
+.product-colours{display:flex;align-items:center;gap:6px;min-height:22px}
+.product-colours>span{margin-left:4px;color:#77736b;font:700 6px var(--display);letter-spacing:.12em}
+.swatch{width:11px;height:11px;border-radius:50%;border:1px solid #15151530;display:inline-block}
+.swatch-black{background:#171717}.swatch-white{background:#fff}.swatch-pink{background:#ff4e9b}.swatch-blue{background:#2587e8}.swatch-yellow{background:#ffe33e}
+.product-foot{display:flex;justify-content:space-between;gap:8px;margin-top:13px;padding-top:9px;border-top:1px solid #15151525;color:#77736b;font:800 7px var(--display);letter-spacing:.08em}
+.product-foot b{color:#151515}
+.catalogue-disclaimer{max-width:650px;margin:42px 0 0;color:#77736b;font-size:9px;line-height:1.7}
+@media(max-width:1050px){.product-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:30px 14px}}
+@media(max-width:700px){.product-catalogue{padding:78px 6vw 85px}.catalogue-heading{padding:42px 0 30px;align-items:start;flex-direction:column;gap:20px}.catalogue-heading>p{max-width:320px}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 12px}.product-description{min-height:68px}.product-title-row h3{font-size:13px}.product-title-row>span{font-size:13px}.product-tag{font-size:6px;right:7px;top:7px}.product-number{left:7px;top:7px;font-size:7px}.product-sold{font-size:9px}.catalogue-topline,.catalogue-toolbar{font-size:7px}}
+@media(max-width:420px){.product-grid{grid-template-columns:1fr;gap:30px}.product-image{aspect-ratio:.92}.product-description{min-height:0}.catalogue-topline,.catalogue-toolbar{font-size:6px;letter-spacing:.08em}}
