@@ -143,4 +143,19 @@
     window.open('https://wa.me/?text=' + message, '_blank', 'noopener,noreferrer');
   });
   renderBag();
+
+  const enquiryForm = document.getElementById('enquiryForm');
+  enquiryForm?.addEventListener('submit', event => {
+    event.preventDefault();
+    if (!enquiryForm.reportValidity()) return;
+    const formData = new FormData(enquiryForm);
+    const name = String(formData.get('name') || '').trim();
+    const email = String(formData.get('email') || '').trim();
+    const message = String(formData.get('message') || '').trim();
+    const text = 'Hi Guru Nation! My name is ' + name + '.' +
+      '\nEmail: ' + email + '\n\n' + message;
+    const status = document.getElementById('formStatus');
+    if (status) status.textContent = 'Opening WhatsApp with your enquiry. Choose the Guru Nation contact to send it.';
+    window.open('https://wa.me/?text=' + encodeURIComponent(text), '_blank', 'noopener,noreferrer');
+  });
 })();
