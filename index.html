@@ -3,7 +3,18 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#f3f0e8">
-<meta name="description" content="Guru Nation — streetwear for every generation. Your style. Your rules. Your nation.">
+<meta name="description" content="Discover Guru Nation streetwear: expressive everyday pieces, bold layers and accessories. Your style. Your rules. To the world.">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Guru Nation">
+<meta property="og:title" content="GURU NATION — To The World">
+<meta property="og:description" content="Streetwear for every generation. Your style. Your rules. Your nation.">
+<meta property="og:url" content="https://kswaagagency.github.io/gurunation-demo/">
+<meta property="og:image" content="https://kswaagagency.github.io/gurunation-demo/IMG_4647.jpeg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GURU NATION — To The World">
+<meta name="twitter:description" content="Streetwear for every generation. Your style. Your rules. Your nation.">
+<meta name="twitter:image" content="https://kswaagagency.github.io/gurunation-demo/IMG_4647.jpeg">
 <title>GURU NATION — To The World</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -35,8 +46,15 @@
   <a href="#top" class="brand" aria-label="Guru Nation home"><span class="brand-symbol">G</span><span>GURU<br><b>NATION</b></span></a>
   <nav class="nav" id="nav"><a href="#collections">COLLECTIONS</a><a href="#story">OUR WORLD</a><a href="#lookbook">LOOKBOOK</a></nav>
   <a class="header-link" href="#collections">DISCOVER THE DROP <svg class="icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a>
+  <button class="bag-trigger" id="openBag" type="button" aria-label="Open shopping bag">BAG <span id="bagCount">0</span></button>
   <button class="menu" id="menu" aria-label="Open navigation" aria-expanded="false"><i></i><i></i></button>
 </header>
+<div class="bag-backdrop" id="bagBackdrop"></div>
+<aside class="bag-drawer" id="bagDrawer" role="dialog" aria-modal="true" aria-labelledby="bagTitle" aria-hidden="true">
+  <div class="bag-head"><div><p class="eyebrow">YOUR SELECTION</p><h2 id="bagTitle">THE BAG<span id="bagHeadingCount"> (0)</span></h2></div><button class="bag-close" id="closeBag" type="button" aria-label="Close shopping bag">×</button></div>
+  <div class="bag-items" id="bagItems"><p class="bag-empty">Your bag is waiting for a little personality.</p></div>
+  <div class="bag-foot"><p class="bag-note">DEMO EXPERIENCE · NO PAYMENT IS COLLECTED</p><button class="whatsapp-order" id="whatsappOrder" type="button" disabled>ENQUIRE ON WHATSAPP <span>↗</span></button><p class="bag-disclaimer">Product availability and pricing are confirmed directly with Guru Nation. This demo does not process payments.</p></div>
+</aside>
 <main>
 <section class="hero">
   <img class="hero-photo" data-parallax="0.16" src="IMG_4647.jpeg" alt="Guru Nation streetwear campaign" fetchpriority="high">
@@ -49,10 +67,10 @@
 <section class="motion-manifesto" aria-label="The Guru Nation mindset"><div class="manifesto-orbit orbit-one"></div><div class="manifesto-orbit orbit-two"></div><p class="eyebrow">NOT HERE TO BLEND IN / 02</p><div class="manifesto-words"><span>BE</span><span class="word-outline">LOUD.</span><span>BE</span><span class="word-colour">YOU.</span></div><p class="manifesto-note">No template. No permission needed. Just you, turned all the way up.</p><div class="manifesto-bottom"><span>SELF-EXPRESSION IS THE UNIFORM</span><span>GN® — TO THE WORLD</span></div></section>
 <section class="collections" id="collections"><div class="section-head"><div><p class="eyebrow">02 / FIND YOUR EXPRESSION</p><h2>THE <em>LINE-UP.</em></h2></div><p>Everyday comfort.<br>Unmistakable character.</p></div>
 <div class="collection-grid">
-<a class="tile tile-feature" href="#lookbook"><img src="IMG_4633.jpeg" alt="Guru Nation everyday streetwear" data-depth><span class="tile-index">01 / EVERYDAY</span><span class="tile-name">THE DAILY<br>ROTATION <b class="arrow-mark"><svg class="icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></b></span></a>
-<a class="tile" href="#lookbook"><img src="IMG_4638.jpeg" alt="Guru Nation coordinated tracksuit" data-depth><span class="tile-index">02 / SETS</span><span class="tile-status"><b>SOLD OUT</b><i>ARCHIVE PRICE <strong>R0</strong></i></span><span class="tile-name">MATCH THE<br>ENERGY <b class="arrow-mark"><svg class="icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></b></span></a>
-<a class="tile" href="#lookbook"><img src="IMG_4634.jpeg" alt="Guru Nation outerwear" data-depth><span class="tile-index">03 / LAYERS</span><span class="tile-name">MAKE AN<br>ENTRANCE <b class="arrow-mark"><svg class="icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></b></span></a>
-<a class="tile" href="#lookbook"><img src="IMG_4636.jpeg" alt="Guru Nation accessories"><span class="tile-index">04 / DETAILS</span><span class="tile-status tile-status-pink"><b>GONE TO THE NATION</b><i>ARCHIVE PRICE <strong>R0</strong></i></span><span class="tile-name">TOP IT<br>OFF <b class="arrow-mark"><svg class="icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></b></span></a>
+<article class="tile tile-feature" data-product="The Daily Rotation"><img src="IMG_4633.jpeg" alt="Guru Nation everyday streetwear" data-depth><span class="tile-index">01 / EVERYDAY</span><span class="tile-name">THE DAILY<br>ROTATION <b class="arrow-mark"><svg class="icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></b></span><button class="add-to-bag" type="button" data-add="The Daily Rotation">ADD TO BAG <span>+</span></button></article>
+<article class="tile" data-product="Match the Energy"><img src="IMG_4638.jpeg" alt="Guru Nation coordinated tracksuit" data-depth><span class="tile-index">02 / SETS</span><span class="tile-status"><b>SOLD OUT</b><i>ARCHIVE PRICE <strong>R0</strong></i></span><span class="tile-name">MATCH THE<br>ENERGY <b class="arrow-mark"><svg class="icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></b></span><span class="sold-out-note">CURRENTLY SOLD OUT</span></article>
+<article class="tile" data-product="Make an Entrance"><img src="IMG_4634.jpeg" alt="Guru Nation outerwear" data-depth><span class="tile-index">03 / LAYERS</span><span class="tile-name">MAKE AN<br>ENTRANCE <b class="arrow-mark"><svg class="icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></b></span><button class="add-to-bag" type="button" data-add="Make an Entrance">ADD TO BAG <span>+</span></button></article>
+<article class="tile" data-product="Top It Off"><img src="IMG_4636.jpeg" alt="Guru Nation accessories"><span class="tile-index">04 / DETAILS</span><span class="tile-status tile-status-pink"><b>GONE TO THE NATION</b><i>ARCHIVE PRICE <strong>R0</strong></i></span><span class="tile-name">TOP IT<br>OFF <b class="arrow-mark"><svg class="icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></b></span><span class="sold-out-note sold-out-pink">GONE TO THE NATION</span></article>
 </div><div class="grid-note"><span>MADE TO MOVE WITH YOU.</span><a href="#lookbook">SEE THE VISUAL DIARY <b class="arrow-mark"><svg class="icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></b></a></div></section>
 <section class="campaign"><img src="IMG_4635.jpeg" alt="Guru Nation community campaign"><div class="campaign-shade"></div><div class="campaign-copy"><p class="eyebrow">03 / THE PEOPLE MAKE THE NATION</p><h2>GOOD<br>VIBES.<br><em>BIG ENERGY.</em></h2><p>It's more than a fit. It's the people, the places and the memories made along the way.</p><a href="#lookbook">MEET THE MOVEMENT <svg class="icon-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M12 5l7 7-7 7"/></svg></a></div><span class="campaign-vertical">GURU NATION — TO THE WORLD</span></section>
 <section class="lookbook" id="lookbook"><div class="section-head"><div><p class="eyebrow">04 / THE VISUAL DIARY</p><h2>THE NATION<br><em>IN MOTION.</em></h2></div><p>Real people. Real expression.<br>One unmistakable identity.</p></div><div class="look-grid">
