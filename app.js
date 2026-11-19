@@ -139,7 +139,7 @@
   }));
   whatsappOrder?.addEventListener('click', () => {
     if (!bag.length) return;
-    const message = encodeURIComponent('Hi Guru Nation! I would like to enquire about these items:\\n' + bag.map(item => item.name + ' — quantity ' + item.quantity).join('\\n') + '\\nPlease confirm availability and pricing. Thank you.');
+    const message = encodeURIComponent('Hi Guru Nation! I would like to enquire about these items:\n' + bag.map(item => item.name + ' — quantity ' + item.quantity).join('\n') + '\nPlease confirm availability and pricing. Thank you.');
     window.open('https://wa.me/?text=' + message, '_blank', 'noopener,noreferrer');
   });
   renderBag();
