@@ -43,3 +43,34 @@
 .tile-status strong{font:900 11px var(--display);margin-left:5px}
 .tile-status-pink>b{background:var(--pink)}
 @media(max-width:600px){.tile-status{top:48px;right:14px}.tile-status>b{font-size:8px}.tile-status>i{font-size:7px}}
+
+
+/* PREMIUM SHOPPING DEMO — enquiry bag, no payment processing */
+.bag-trigger{border:1px solid #ffffffa8;background:transparent;color:#fff;padding:11px 14px;font:800 9px var(--display);letter-spacing:.13em;cursor:pointer;display:flex;align-items:center;gap:9px;transition:background .25s,color .25s}
+.bag-trigger span{display:grid;place-items:center;min-width:18px;height:18px;border-radius:50%;background:var(--yellow);color:var(--ink);font-size:9px}
+.bag-trigger:hover{background:var(--yellow);color:var(--ink)}
+.bag-backdrop{position:fixed;inset:0;z-index:1300;background:#0808088c;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s}
+.bag-backdrop.open{opacity:1;visibility:visible}
+.bag-drawer{position:fixed;z-index:1301;top:0;right:0;width:min(470px,100%);height:100dvh;background:var(--paper);color:var(--ink);padding:34px clamp(22px,5vw,38px);display:flex;flex-direction:column;transform:translateX(105%);transition:transform .42s cubic-bezier(.2,.75,.2,1);box-shadow:-20px 0 70px #0002}
+.bag-drawer.open{transform:translateX(0)}
+.bag-head{display:flex;align-items:flex-start;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:24px}
+.bag-head .eyebrow{margin-bottom:10px}.bag-head h2{font:800 34px/.95 var(--display);letter-spacing:-.07em;margin:0}
+.bag-close{border:1px solid var(--ink);width:38px;height:38px;background:transparent;font-size:27px;line-height:1;cursor:pointer}
+.bag-items{overflow:auto;flex:1;padding:12px 0}
+.bag-empty{font-size:13px;color:#777;line-height:1.7;padding:22px 0}
+.bag-row{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:17px 0;border-bottom:1px solid var(--line)}
+.bag-row strong{display:block;font:700 14px var(--display)}.bag-row small{display:block;margin-top:5px;color:#777;font-size:9px;letter-spacing:.1em}
+.bag-remove{border:0;background:none;text-decoration:underline;font-size:10px;cursor:pointer;color:#777}
+.bag-foot{border-top:1px solid var(--line);padding-top:20px}
+.bag-note{font-size:8px;font-weight:800;letter-spacing:.14em;color:#777}
+.whatsapp-order{width:100%;border:0;background:#151515;color:#fff;padding:17px 18px;text-align:left;font:800 10px var(--display);letter-spacing:.12em;cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:background .25s,color .25s}
+.whatsapp-order:hover:not(:disabled){background:var(--yellow);color:var(--ink)}
+.whatsapp-order:disabled{opacity:.35;cursor:not-allowed}
+.bag-disclaimer{font-size:10px;line-height:1.6;color:#777}
+.add-to-bag{position:absolute;z-index:5;right:17px;bottom:70px;border:1px solid #fff;background:#f3f0e8;color:#151515;padding:10px 12px;font:800 8px var(--display);letter-spacing:.1em;cursor:pointer;transition:background .2s,transform .2s}
+.add-to-bag span{font-size:14px;margin-left:7px}.add-to-bag:hover{background:var(--yellow);transform:translateY(-3px)}
+.sold-out-note{position:absolute;z-index:4;left:18px;bottom:76px;background:var(--yellow);color:var(--ink);padding:8px 10px;font:900 8px var(--display);letter-spacing:.1em}
+.sold-out-pink{background:var(--pink)}
+body.bag-open{overflow:hidden}
+@media(max-width:800px){.bag-trigger{padding:9px 10px;margin-left:auto;margin-right:10px}.header-link{margin-left:auto}.bag-drawer{padding-top:25px}}
+@media(max-width:460px){.bag-trigger{font-size:7px;padding:8px}.add-to-bag{right:12px;bottom:66px;padding:9px}.sold-out-note{left:12px;bottom:68px;font-size:7px}}
